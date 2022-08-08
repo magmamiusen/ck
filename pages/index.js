@@ -6,47 +6,88 @@ const titlePage = "Home";
 
 export default function Home() {
   return (
-    <div className={style.main}>
-      <Head>
-        <title>{titlePage}</title>
-      </Head>
-      <header className={style.status}>
-        <Link href="/">
-          <a className={style.title}>
-            CookBook
-          </a>
-        </Link>
-        <div className={style.user}></div>
-      </header>
-      <main>
-        <section className={style.wrapper}>
-          <div className={style.item}>
-            Pasteles
-          </div>
-          <div className={style.item}>
-            Vegetariano
-          </div>
-          <div className={style.item}>
-            Parrilla
-          </div>
-          <div className={style.item}>
-            Restaurante
-          </div>
-        </section>
-        <section className={style.gallery}>
-          <div className={style.item}>Rabilin</div>
-          <div className={style.item}>Rabilin</div>
-          <div className={style.item}>Rabilin</div>
-          <div className={style.item}>Rabilin</div>
-          <div className={style.item}>Rabilin</div>
-          <div className={style.item}>Rabilin</div>
-          <div className={style.item}>Rabilin</div>
-          <div className={style.item}>Rabilin</div>
-          <div className={style.item}>Rabilin</div>
-          <div className={style.item}>Rabilin</div>
-          <div className={style.item}>Rabilin</div>
-        </section>
-      </main>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Programa para salir de la friendzone</title>
+    <meta charset="UTF-8">
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background: #fcfcfc;
+    }
+    .contenedor {
+        margin: auto;
+        width: 900px;
+        margin-top: 300px;
+        text-align: center;
+    }
+    .titulo{
+        margin-bottom: 20px;
+    }
+    .opciones p {
+        background: #ffa02a;
+        display: initial;
+        padding: 12px;
+        color: #ffffff;
+        border-radius: 2px;
+        font-weight: bold;
+    }
+    p.p1 {
+        position: absolute;
+        top: 400px;
+        left: 609px;
+        width: 100px;
+    }
+    p.p2{
+        position: absolute;
+        top: 400px;
+        left: 800px;
+        width: 100px;
+    }
+    #si {
+        background: #515050;
+        left: 420px;position: absolute;
+        top: 122px;
+        width: 550px;
+        color: #ffffff;
+        padding: 50px;
+        display: none;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".p1").hover(function(){
+      arriba =  Math.random() * (400 - 1) + 1;
+      abajo =  Math.random() * (609 - 1) + 1;
+    $(this).css("top", arriba);
+    $(this).css("left", abajo);
+    });
+});
+function dijoSi(){
+    document.getElementById("si").style.display = "block";
+}
+</script>
+<body>
+<div class="contenedor">
+    <div class="titulo">
+        <h1>¿poner aca algo  ?</h1>
     </div>
+    <div class="opciones">
+        <p class="p1">NO</p>
+        <p onclick="dijoSi()" class="p2">SI</p>
+        <div id="si">    
+                <img src="Memecorazon.jpg" width="70%">
+                <h2>poner aca el mensaje del si </h2>
+        </div>
+    </div>
+</div>
+</body>
+</html>
   )
 }
